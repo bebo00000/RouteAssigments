@@ -1,3 +1,4 @@
+
 ﻿#region q01
 
 //if(int.TryParse(Console.ReadLine(), out int hours))
@@ -153,6 +154,8 @@
 //    int.TryParse(Console.ReadLine(), out arr[i]);
 //}
 
+
+
 //int largest = int.MinValue;
 //int secondLargest = int.MinValue;
 
@@ -172,13 +175,20 @@
 //if (secondLargest == int.MinValue)
 //{
 //    Console.WriteLine("There is no second largest element.");
-//}
-//else
+
+
+//
+//Console.WriteLine(); 
+//
+//
+//static bool IsPrime(int number)
 //{
+
 //    Console.WriteLine("The second largest element is: " + secondLargest);
-//}
+
 
 #endregion
+
 
 #region distance between two equal numbers
 //Console.Write("Enter the size of the array: ");
@@ -201,8 +211,11 @@
 //        }
 
 
+
 //}
+//Console.WriteLine($"The Binary of {number} is {binary}");
 #endregion
+
 
 #region reverse words in a string
 //Console.WriteLine("Please Enter Sring ");
@@ -233,7 +246,7 @@
 
 //        } while (!flag);
 //    }
-//}
+
 
 
 //for (int i = 0; i < 3; i++)
@@ -248,6 +261,7 @@
 
 //for (int i = 0; i < 3; i++)
 //{
+
 //    for (int j = 0; j < 3; j++)
 //    {
 //        Console.Write($"{Array02[i,j]}  " ) ;
@@ -286,3 +300,4 @@
 
 
 #endregion
+
