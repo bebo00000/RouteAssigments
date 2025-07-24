@@ -1,207 +1,303 @@
-﻿
 
-/////////////////////////Assigment 04//////////////////// 
+﻿#region q01
 
-
-#region // Print numbers from 1 to N
-//int.TryParse(Console.ReadLine(), out int number);
-//for(int i=1;i<=number;i++)
+//if(int.TryParse(Console.ReadLine(), out int hours))
 //{
-//    Console.WriteLine(i);
-//}
-#endregion
-
-#region // Print multiplication table of a number
-//int.TryParse(Console.ReadLine(), out int number);
-//for (int i = 1; i <= 12; i++)
-//{
-//    Console.WriteLine(number*i);
-//}
-#endregion
-
-#region // Print even numbers from 1 to N
-//if(int.TryParse(Console.ReadLine(), out int number))
-//{
-//    for (int i = 1; i <= number; i++)
-//    {
-//        if (i % 2 == 0)
-//        {
-//            Console.WriteLine(i);
-//        }
-//    }
+//    if (hours < 3)
+//        Console.WriteLine("high efficient");
+//    else if (hours > 3 && hours < 4)
+//        Console.WriteLine("need to increase their speed");
+//    else if (hours == 5)
+//        Console.WriteLine("train");
+//    else
+//        Console.WriteLine("leave");
 //}
 //else
 //{
-//    Console.WriteLine("Invalid input.");
+//    Console.WriteLine("Invalid input");
 //}
 
 #endregion
 
-#region power of a number
-//int.TryParse(Console.ReadLine(),out int number);
-//int.TryParse(Console.ReadLine(),out int power);
-//Console.WriteLine(Math.Pow(number,power));
+#region identity mat
+//int.TryParse(Console.ReadLine(),out int n);
+//for (int i = 0; i < n; i++)
+//{for (int j = 0; j < n; j++)
+//    { if (i == j)
+//            Console.Write("1");
+//        else
+//            Console.Write("0");
+//    }
+//  Console.WriteLine();
+//}
 #endregion
 
-#region // Print sum and average of five numbers
-//Console.WriteLine("Enter Five Number");
-//int.TryParse(Console.ReadLine(), out int number01);
-//int.TryParse(Console.ReadLine(), out int number02);
-//int.TryParse(Console.ReadLine(), out int number03);
-//int.TryParse(Console.ReadLine(), out int number04);
-//int.TryParse(Console.ReadLine(), out int number05);
-//Console.WriteLine("The sum of the five numbers is: " + (number01 + number02 + number03 + number04 + number05));
-//Console.WriteLine($"Avg of the five numbers:{(number01 + number02 + number03 + number04 + number05) / 5}");
-//Console.WriteLine("Percentage");
-#endregion
-
-#region // Reverse a string
-using System;
-using System.Transactions;
-
-//class Program
+#region sum of array elements
+//int[] arr = { 3,1,4,1,2};
+//int counter =0;
+//for (int i = 0; i < arr.Length; i++)
 //{
-//    static void Main()
+//    counter += arr[i];
+//
+//}
+//Console.WriteLine("Sum of array elements: " + counter);
+#endregion
+
+#region merge and sort arrays
+//int size;
+//
+// Console.Write("Enter the size of the arrays: ");
+// int.TryParse(Console.ReadLine(), out size);
+//
+// int[] array1 = new int[size];
+// int[] array2 = new int[size];
+//
+// Console.WriteLine("Enter elements for the first array:");
+// for (int i = 0; i < size; i++)
+// {
+//     Console.Write($"Element {i + 1}: ");
+//     int.TryParse(Console.ReadLine(), out array1[i]);
+// }
+//
+// Console.WriteLine("Enter elements for the second array:");
+// for (int i = 0; i < size; i++)
+// {
+//     Console.Write($"Element {i + 1}: ");
+//     int.TryParse(Console.ReadLine(), out array2[i]);
+// }
+// int[] merged = new int[size * 2];
+// for (int i = 0; i < size; i++)
+// {
+//     merged[i] = array1[i];
+//     merged[size + i] = array2[i];
+// }
+// Array.Sort(merged);
+// Console.WriteLine("Merged array in ascending order:");
+// foreach (int value in merged)
+// {
+//     Console.Write(value + " ");
+// }
+//
+// Console.WriteLine(); 
+#endregion
+
+#region frequency of elements in an array
+
+//int size;
+
+//Console.Write("Enter the size of the array: ");
+//int.TryParse(Console.ReadLine(), out size);
+
+//int[] arr = new int[size];
+//int[] freq = new int[size]; // to track frequency
+//int visited = -1;
+
+//Console.WriteLine("Enter elements of the array:");
+//for (int i = 0; i < size; i++)
+//{
+//    Console.Write($"Element {i + 1}: ");
+//    int.TryParse(Console.ReadLine(), out arr[i]);
+//}
+
+//for (int i = 0; i < size; i++)
+//{
+//    int count = 1;
+//    for (int j = i + 1; j < size; j++)
 //    {
-//        Console.Write("Enter a string: ");
-//        string input = Console.ReadLine();
-//
-//        string reversed = "";
-//
-//        // Loop from end of string to start
-//        for (int i = input.Length - 1; i >= 0; i--)
+//        if (arr[i] == arr[j])
 //        {
-//            reversed += input[i];  // Append each character
+//            count++;
+//            freq[j] = visited; 
 //        }
-//
-//        Console.WriteLine("Reversed string: " + reversed);
 //    }
-//}
 
-#endregion
-
-#region // Reverse a number
-//Console.Write("Enter a number: ");
-//bool success = int.TryParse(Console.ReadLine(), out int number);
-//
-//if (success)
-//{
-//    string numberStr = number.ToString();
-//    string reversed = "";
-//
-//    for (int i = numberStr.Length - 1; i >= 0; i--)
-//    {
-//        reversed += numberStr[i];
-//    }
-//
-//    Console.WriteLine("Reversed number: " + reversed);
+//    if (freq[i] != visited)
+//        freq[i] = count;
 //}
-//else
+//Console.WriteLine("\nFrequency of each element:");
+//for (int i = 0; i < size; i++)
 //{
-//    Console.WriteLine("Invalid input. Please enter a valid number.");
+//    if (freq[i] != visited)
+//        Console.WriteLine($"{arr[i]} occurs {freq[i]} time(s)");
 //}
 
 
 
 #endregion
 
-#region // Check if a number is prime
-//Console.Write("Input starting number of range: ");
-//int start = int.Parse(Console.ReadLine());
-//
-//Console.Write("Input ending number of range: ");
-//int end = int.Parse(Console.ReadLine());
-//
-//Console.WriteLine("\nThe prime numbers between {0} and {1} are:", start, end);
-//
-//for (int i = start; i <= end; i++)
+#region max and min of array elements
+//int max ;
+//int min ;
+//int[] arr = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
+//max = arr[0];
+//min = arr[0];
+//for (int i= 0; i<arr.Length; i++)
 //{
-//     if (IsPrime(i))
+//    if (arr[i] > max)
+//        max = arr[i];
+//    else if (arr[i] < min)
+//        min = arr[i];
+//}
+//Console.WriteLine($"max value: {max}");
+//Console.WriteLine($"min value: {min}");
+#endregion
+
+#region second largest element in an array
+//Console.Write("Enter the size of the array: ");
+//int.TryParse(Console.ReadLine(), out int size);
+
+//int[] arr = new int[size];
+
+//Console.WriteLine("Enter the array elements:");
+//for (int i = 0; i < size; i++)
+//{
+//    int.TryParse(Console.ReadLine(), out arr[i]);
+//}
+
+
+
+//int largest = int.MinValue;
+//int secondLargest = int.MinValue;
+
+//foreach (int num in arr)
+//{
+//    if (num > largest)
 //    {
-//        Console.Write(i + " ");
+//        secondLargest = largest;
+//        largest = num;
+//    }
+//    else if (num > secondLargest && num != largest)
+//    {
+//        secondLargest = num;
 //    }
 //}
+
+//if (secondLargest == int.MinValue)
+//{
+//    Console.WriteLine("There is no second largest element.");
+
+
 //
 //Console.WriteLine(); 
 //
 //
 //static bool IsPrime(int number)
 //{
-//    if (number <= 1) return false;
-//    if (number == 2) return true;
-//
-//    for (int i = 2; i <= Math.Sqrt(number); i++)
-//    {
-//        if (number % i == 0) return false;
-//    }
-//
-//    return true;
-//}
+
+//    Console.WriteLine("The second largest element is: " + secondLargest);
+
 
 #endregion
 
-#region convert to binary
-//Console.Write("Enter a number to convert: ");
-//int number = int.Parse(Console.ReadLine());
-//string binary = "";
-//int n = number;
-//while (n > 0)
+
+#region distance between two equal numbers
+//Console.Write("Enter the size of the array: ");
+//int.TryParse(Console.ReadLine(), out int size);
+//int[] arr =new int[size];
+//Console.WriteLine("Enter the array elements:"); 
+//for (int i = 0; i < size; i++)
 //{
-//    int remainder = n % 2;
-//    binary = remainder + binary; // Build the binary string in reverse
-//    n = n / 2;
+//    int.TryParse(Console.ReadLine(), out arr[i]);
+//}
+
+//for (int i = 0; i < size; i++)
+//{
+//    for (int j = i + 1; j < size; j++)
+//        if (arr[i] == arr[j])
+//        {
+//            Console.WriteLine($"distance between two equal nums:{(j-1) - i}");
+//            Console.WriteLine(i);
+//            Console.WriteLine(j);
+//        }
+
+
+
 //}
 //Console.WriteLine($"The Binary of {number} is {binary}");
 #endregion
 
-#region three points in same line or not ?
-//Console.Write("Enter x1: ");
-//double x1 = double.Parse(Console.ReadLine());
+
+#region reverse words in a string
+//Console.WriteLine("Please Enter Sring ");
+//string Words = Console.ReadLine();
+//string[] strings = Words.Trim().Split(" "); 
 //
-//Console.Write("Enter y1: ");
-//double y1 = double.Parse(Console.ReadLine());
-//
-//Console.Write("Enter x2: ");
-//double x2 = double.Parse(Console.ReadLine());
-//
-//Console.Write("Enter y2: ");
-//double y2 = double.Parse(Console.ReadLine());
-//
-//Console.Write("Enter x3: ");
-//double x3 = double.Parse(Console.ReadLine());
-//
-//Console.Write("Enter y3: ");
-//double y3 = double.Parse(Console.ReadLine());
-//
-//double area = x1 * (y2 - y3) +
-//              x2 * (y3 - y1) +
-//              x3 * (y1 - y2);
-//
-//if (area == 0)
+//for(int i = strings.Length-1; i >=0; i--)
 //{
-//    Console.WriteLine("The points lie on the same straight line.");
-//}
-//else
-//{
-//    Console.WriteLine("The points do NOT lie on the same straight line.");
+//
+//    Console.Write($"{strings[i]} ");
 //}
 #endregion
 
-#region identity matrix
-//Console.Write("Enter the size of the identity matrix (n): ");
-//int n = int.Parse(Console.ReadLine());
-//
-//Console.WriteLine("\nIdentity matrix of size {0} x {1}:\n", n, n);
-//
-//for (int i = 0; i < n; i++)      
+#region copy array elements multidimensional array
+//bool flag;
+//int[,] Array01 = new int[3, 3];
+//int[,] Array02 = new int[3, 3];
+
+//for (int i = 0; i < 3; i++)
 //{
-//    for (int j = 0; j < n; j++)  
+//    for (int j = 0; j < 3; j++)
 //    {
-//        if (i == j)
-//            Console.Write("1 ");
-//        else
-//            Console.Write("0 ");
+//        do
+//        {
+//            Console.WriteLine($"Enter Element Of Row {i + 1} Column {j+1} Of Array 01");
+//            flag = int.TryParse(Console.ReadLine(), out Array01[i,j]);
+
+
+//        } while (!flag);
 //    }
-//    Console.WriteLine(); 
+
+
+
+//for (int i = 0; i < 3; i++)
+//{
+//    for (int j = 0; j < 3; j++)
+//    {
+//        Array02[i,j] = Array01[i,j];
+//    }
+//}
+
+
+
+//for (int i = 0; i < 3; i++)
+//{
+
+//    for (int j = 0; j < 3; j++)
+//    {
+//        Console.Write($"{Array02[i,j]}  " ) ;
+//    }
+//    Console.WriteLine();
 //}
 #endregion
+
+#region reverse array elements
+//int size;
+//bool flag;
+//do
+//{
+//    Console.WriteLine("Enter The Size Of Array");
+//    flag = int.TryParse(Console.ReadLine(), out size);
+
+
+//} while (flag ==false);
+
+//int[] Arr = new int[size];
+
+//for (int i = 0; i < Arr.Length; i++)
+//{
+//    do
+//    {
+//        Console.WriteLine($"Enter The Element {i+1} Of Array");
+//        flag = int.TryParse(Console.ReadLine(), out Arr[i]);
+
+//    } while (!flag);
+//}
+
+//for (int i = Arr.Length - 1; i >= 0; i--) 
+//{
+//    Console.Write($"{Arr[i]} ");
+//}
+
+
+#endregion
+
